@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMCTN · Associação dos Moradores do Conjunto Tancredo Neves</title>
+<meta name="description" content="Desenvolvimento humano e qualidade de vida no Conjunto Tancredo Neves, em Fortaleza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Sacramento&display=swap">
+<style>
+:root{--bairro:#1E4FA0;--noite:#12275A;--ceu:#5BB0E8;--sol:#F8BA1E;--telha:#EF7B2E;--tijolo:#D8443C;--quintal:#3BA55D;--turquesa:#1FA5A3;--festa:#D6458C;
+--bg:#FBF8F1;--fg:#182142;--card:#fff;--line:#e3ddcf;--muted:#525c7c;--link:#1E4FA0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1630;--fg:#eef1fb;--card:#16214a;--line:#2a3766;--muted:#a6b1d6;--link:#5BB0E8}}
+:root[data-theme="dark"]{--bg:#0d1630;--fg:#eef1fb;--card:#16214a;--line:#2a3766;--muted:#a6b1d6;--link:#5BB0E8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.05rem/1.65 Poppins,system-ui,sans-serif}
+a{color:var(--link)}.wrap{max-width:66rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-weight:800;line-height:1.15;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--link);margin-bottom:.6rem}
+p{margin:.5rem 0;max-width:42rem}section{padding:4rem 0}
+:focus-visible{outline:3px solid var(--ceu);outline-offset:3px}
+.skip{position:absolute;left:-99rem}.skip:focus{left:1rem;top:1rem;background:#fff;color:#000;padding:.5rem;z-index:99}
+/* topo */
+header.top{position:sticky;top:0;z-index:20;background:var(--bairro);color:#fff}
+.bar{display:flex;align-items:center;gap:1rem;min-height:4rem}
+.logo{font-weight:800;font-size:1.6rem;letter-spacing:.02em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo svg{width:1.7rem;height:1.7rem;color:var(--sol)}
+nav{margin-left:auto}nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0;align-items:center}
+nav a{color:#fff;text-decoration:none;font-weight:500;font-size:.95rem}nav a:hover{text-decoration:underline}
+.btn{display:inline-block;font:600 1rem Poppins,sans-serif;border:0;border-radius:.7rem;padding:.8rem 1.4rem;cursor:pointer;text-decoration:none;background:var(--sol);color:#182142}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn.blue{background:var(--bairro);color:#fff}
+nav .btn{padding:.5rem 1rem;font-size:.9rem}
+.burger{display:none;margin-left:auto;background:none;border:2px solid #fff;color:#fff;border-radius:.5rem;padding:.4rem .7rem;font:600 .95rem Poppins}
+@media (max-width:52rem){.burger{display:block}nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--noite);padding:1rem 1.25rem}nav.open{display:block}nav ul{flex-direction:column;align-items:flex-start}}
+/* hero */
+.hero{background:var(--bairro);color:#fff;padding:4.5rem 0 0;overflow:hidden}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);letter-spacing:-.02em;max-width:14ch}
+.script{font-family:Sacramento,cursive;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:.6rem 0 1rem}
+.hero p{color:#e2ebff}.acts{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.sky{display:block;width:100%;height:auto;margin-top:3rem}
+/* sobre */
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:start}
+@media (max-width:52rem){.two{grid-template-columns:1fr}}
+.facts{display:grid;gap:.75rem}.fact{background:var(--card);border:1px solid var(--line);border-left:.4rem solid var(--c);border-radius:.8rem;padding:.9rem 1.1rem}
+.fact b{display:block;font-weight:600}.fact span{color:var(--muted);font-size:.95rem}
+/* projetos */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.tab{border:2px solid var(--c);background:transparent;color:var(--fg);border-radius:2rem;padding:.45rem 1.1rem;font:600 .95rem Poppins;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--c);color:var(--t,#fff)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.1rem 1.2rem;text-decoration:none;color:var(--fg);display:block}
+.card::before{content:"";display:block;height:.4rem;border-radius:.4rem;background:var(--c);margin-bottom:.8rem}
+.card:hover{border-color:var(--c)}.card h3{font-size:1.05rem;color:var(--fg)}.card p{font-size:.92rem;color:var(--muted);margin:.3rem 0 0}
+[hidden]{display:none!important}
+/* faixa */
+.band{background:var(--noite);color:#fff}.band h2{color:#fff}.band p{color:#d5def5}
+.band .cards .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:#fff}.band .card h3{color:#fff}.band .card p{color:#cfd8f3}
+.years{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.years a{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.4rem .9rem;text-decoration:none;font-weight:600;font-size:.95rem}
+/* doar */
+.doar{background:var(--sol);color:#182142}.doar h2{color:#12275A}.doar p{color:#182142}
+.doar .btn.blue{background:#12275A}
+/* rodapé */
+footer{background:var(--noite);color:#d5def5;padding:3rem 0 2rem;font-size:.95rem}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:2rem}
+footer h3{color:#fff;font-size:1rem;margin-bottom:.5rem}footer a{color:#fff}footer p{margin:.25rem 0}
+.small{margin-top:2rem;font-size:.85rem;opacity:.8}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="casa" viewBox="0 0 60 60"><polygon points="30,2 58,22 58,58 2,58 2,22" fill="currentColor"/><rect x="24" y="36" width="12" height="22" rx="2" fill="#fff" opacity=".85"/><rect x="9" y="28" width="9" height="9" rx="1" fill="#fff" opacity=".6"/><rect x="42" y="28" width="9" height="9" rx="1" fill="#fff" opacity=".6"/></symbol></defs></svg>
+
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="#"><svg aria-hidden="true"><use href="#casa"/></svg>AMCTN</a>
+  <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav id="menu" aria-label="Principal"><ul>
+    <li><a href="#associacao">A Associação</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#programas">Programas</a></li>
+    <li><a href="#editais">Editais</a></li><li><a href="#contato">Contato</a></li><li><a class="btn" href="#doar">Doar</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="conteudo">
+<div class="hero"><div class="wrap">
+  <h1>Associação dos Moradores do Conjunto Tancredo Neves</h1>
+  <p class="script">Transformando vidas no Tancredo Neves</p>
+  <p>Serviços de desenvolvimento humano para crianças, adolescentes, jovens e idosos, com apoio à capacitação para o trabalho.</p>
+  <div class="acts"><a class="btn" href="#doar">Fazer uma doação</a><a class="btn ghost" href="#projetos">Conhecer os projetos</a></div>
+</div>
+<svg class="sky" viewBox="0 0 960 90" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g transform="translate(0,30)"><use href="#casa" x="10" width="60" height="60" style="color:#F8BA1E"/><use href="#casa" x="95" width="50" height="50" y="10" style="color:#D6458C"/><use href="#casa" x="170" width="64" height="60" style="color:#3BA55D"/><use href="#casa" x="260" width="52" height="60" style="color:#EF7B2E"/><use href="#casa" x="340" width="60" height="60" style="color:#5BB0E8"/><use href="#casa" x="425" width="50" height="50" y="10" style="color:#D8443C"/><use href="#casa" x="500" width="64" height="60" style="color:#1FA5A3"/><use href="#casa" x="590" width="52" height="60" style="color:#F8BA1E"/><use href="#casa" x="665" width="60" height="60" style="color:#D6458C"/><use href="#casa" x="750" width="50" height="50" y="10" style="color:#3BA55D"/><use href="#casa" x="825" width="64" height="60" style="color:#EF7B2E"/><use href="#casa" x="910" width="52" height="60" style="color:#5BB0E8"/></g></svg></div>
+
+<section id="associacao"><div class="wrap two">
+  <div>
+    <h2>A Associação</h2>
+    <p>A AMCTN oferece serviços para o desenvolvimento humano e a melhoria contínua da qualidade de vida, com ações filantrópicas nas áreas sociais de maior necessidade dos moradores.</p>
+    <p>O trabalho alcança crianças, adolescentes, jovens e idosos do Conjunto Tancredo Neves, com apoio à capacitação para o trabalho e foco na valorização humana, emocional e comunitária.</p>
+    <div class="acts"><a class="btn blue" href="https://amctn.ong.br/sobreaempresa/">Ler mais sobre nós</a></div>
+  </div>
+  <div class="facts">
+    <div class="fact" style="--c:#3BA55D"><b>Unidades de Acolhimento</b><span>Recanto e Renascer</span></div>
+    <div class="fact" style="--c:#D6458C"><b>Cultura e festa</b><span>Pré-Carnaval, Pastoril, Quadrilhas, Paixão de Cristo</span></div>
+    <div class="fact" style="--c:#1E4FA0"><b>Transparência</b><span>Plano de Trabalho, convênios e editais publicados</span></div>
+  </div>
+</div></section>
+
+<section id="projetos" style="padding-top:0"><div class="wrap">
+  <h2>Projetos</h2>
+  <p>Escolha uma área para ver os projetos.</p>
+  <div class="tabs" role="tablist" aria-label="Áreas de projetos">
+    <button class="tab" role="tab" aria-selected="true" data-t="sociais" style="--c:#3BA55D">Sociais</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="culturais" style="--c:#D6458C">Culturais</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="esportivos" style="--c:#EF7B2E">Esportivos</button>
+  </div>
+  <div class="cards" id="p-sociais" style="--c:#3BA55D">
+    <a class="card" href="https://amctn.ong.br/unidades/"><h3>Unidades de Acolhimento</h3><p>Recanto e Renascer.</p></a>
+    <a class="card" href="https://amctn.ong.br/arte-e-vida/"><h3>Arte é Vida</h3><p>Serviço de Convivência e Fortalecimento de Vínculos.</p></a>
+    <a class="card" href="https://amctn.ong.br/viver-e-conectar-2/"><h3>Viver é Conectar</h3><p>Serviço de Convivência e Fortalecimento de Vínculos.</p></a>
+    <a class="card" href="https://amctn.ong.br/atelie-criativo-2/"><h3>Ateliê Criativo</h3></a>
+    <a class="card" href="https://amctn.ong.br/capacitacoes/"><h3>Capacitações</h3></a>
+    <a class="card" href="https://amctn.ong.br/coral-girassol/"><h3>Coral Girassol</h3></a>
+    <a class="card" href="https://amctn.ong.br/mulheres-em-acao/"><h3>Mulheres em Ação</h3></a>
+    <a class="card" href="https://amctn.ong.br/vivaterezinha/"><h3>Viva Terezinha</h3></a>
+    <a class="card" href="https://amctn.ong.br/vivendo-e-convivendo/"><h3>Vivendo e Convivendo</h3></a>
+    <a class="card" href="https://amctn.ong.br/sabor-da-vida/"><h3>Sabor da Vida</h3></a>
+    <a class="card" href="https://amctn.ong.br/purpurinadas_/"><h3>Purpurinadas</h3></a>
+    <a class="card" href="https://amctn.ong.br/Sociais"><h3>Ver todos os sociais</h3></a>
+  </div>
+  <div class="cards" id="p-culturais" style="--c:#D6458C" hidden>
+    <a class="card" href="https://amctn.ong.br/precarnaval/"><h3>Pré-Carnaval</h3><p>Bloco Amigos da Folia e Bloco Viva Terezinha.</p></a>
+    <a class="card" href="https://amctn.ong.br/pastoril/"><h3>Pastoril</h3></a>
+    <a class="card" href="https://amctn.ong.br/paixao-de-cristo-2026/"><h3>Paixão de Cristo 2026</h3></a>
+    <a class="card" href="https://amctn.ong.br/festival-de-quadrilhas/"><h3>Festival de Quadrilhas</h3></a>
+    <a class="card" href="https://amctn.ong.br/cineclube-amctn/"><h3>Cine Clube AMCTN</h3></a>
+    <a class="card" href="https://amctn.ong.br/kombi-literatura/"><h3>Kombi da Literatura</h3></a>
+  </div>
+  <div class="cards" id="p-esportivos" style="--c:#EF7B2E" hidden>
+    <a class="card" href="https://amctn.ong.br/_capoeira/"><h3>Capoeira</h3></a>
+    <a class="card" href="https://amctn.ong.br/joga-menina/"><h3>Joga Menina</h3></a>
+    <a class="card" href="https://amctn.ong.br/jiujitsu/"><h3>Jiu Jitsu</h3></a>
+  </div>
+</div></section>
+
+<section id="programas" class="band"><div class="wrap">
+  <h2>Programas</h2>
+  <div class="cards" style="--c:#1FA5A3;margin-top:1rem">
+    <a class="card" href="https://amctn.ong.br/maisnutricao/"><h3>Mais Nutrição</h3></a>
+    <a class="card" href="https://amctn.ong.br/?page_id=22690"><h3>PAA Leite</h3></a>
+    <a class="card" href="https://amctn.ong.br/espaco-gastronomico/"><h3>Espaço Gastronômico</h3></a>
+  </div>
+</div></section>
+
+<section id="editais"><div class="wrap two">
+  <div>
+    <h2>Editais e transparência</h2>
+    <p>Editais, resultados, convênios e o Plano de Trabalho ficam publicados para consulta.</p>
+    <div class="years" style="--c:#1E4FA0">
+      <a href="https://amctn.ong.br/editais_2026">2026</a><a href="https://amctn.ong.br/editais2025/">2025</a><a href="https://amctn.ong.br/editais-2024/">2024</a><a href="https://amctn.ong.br/editais-2023/">2023</a><a href="https://amctn.ong.br/editais2022/">2022</a><a href="https://amctn.ong.br/publicacoes-2021/">2021</a><a href="https://amctn.ong.br/pub2020/">2020</a>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="fact" style="--c:#1E4FA0"><b><a href="https://amctn.ong.br/plano-de-trabalho/">Plano de Trabalho</a></b></div>
+    <div class="fact" style="--c:#1E4FA0"><b><a href="https://amctn.ong.br/convenios/">Convênios</a></b></div>
+    <div class="fact" style="--c:#1E4FA0"><b><a href="https://amctn.ong.br/manifestacao-de-interesse/">Manifestação de interesse</a></b></div>
+    <div class="fact" style="--c:#D8443C"><b><a href="https://amctn.ong.br/elementor-35748/">Ouvidoria</a></b><span>Sugestões, elogios e reclamações</span></div>
+  </div>
+</div></section>
+
+<section id="doar" class="doar"><div class="wrap">
+  <h2>Contribua</h2>
+  <p>Faça sua doação à instituição e cadastre-se no programa Sua Nota Tem Valor. Você também pode ajudar como voluntário ou trabalhar conosco.</p>
+  <div class="acts"><a class="btn blue" href="https://amctn.ong.br/suasdoacoes/">Como doar</a><a class="btn blue" href="https://amctn.ong.br/sejavoluntario/">Seja voluntário</a><a class="btn blue" href="https://amctn.ong.br/trabalheconosco/">Trabalhe conosco</a></div>
+</div></section>
+</main>
+
+<footer id="contato"><div class="wrap">
+  <div class="cols">
+    <div><h3>AMCTN</h3><p>Rua Beija Flor, 155, entrada pela Rua Frei Caneca, 299<br>Conj. Tancredo Neves, Jardim das Oliveiras<br>Fortaleza, Ceará · CEP 60.820-110</p><p><a href="https://www.google.com/maps/place/ASSOCIA%C3%87%C3%83O+DOS+MORADORES+DO+CONJUNTO+TANCREDO+NEVES-AMCTN/@-3.7862358,-38.5095351,17z">Como chegar</a></p></div>
+    <div><h3>Fale conosco</h3><p>Telefone: <a href="tel:+558532757385">(85) 3275 7385</a></p><p>E-mail: <a href="mailto:amctn.2017@gmail.com">amctn.2017@gmail.com</a></p><p><a href="https://amctn.ong.br/faleconosco/">Formulário de contato</a></p></div>
+    <div><h3>Horário</h3><p>Segunda a quinta, 7h às 17h<br>Sexta, 7h às 16h</p></div>
+    <div><h3>Redes sociais</h3><p><a href="https://www.instagram.com/amctn">Instagram</a></p><p><a href="https://www.facebook.com/associacaoamctn">Facebook</a></p><p><a href="https://www.youtube.com/c/Associa%C3%A7%C3%A3odosMoradoresdoConjuntoTancredoNeves">YouTube</a></p></div>
+  </div>
+  <p class="small">CNPJ 07.794.357/0001-38 · <a href="https://amctn.ong.br/politica-de-privacidade/">Política de Privacidade</a> · <a href="https://amctn.ong.br/termos-condicoes/">Termos e Condições</a></p>
+</div></footer>
+
+<script>
+var b=document.querySelector('.burger'),n=document.getElementById('menu');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);document.getElementById('p-'+x.dataset.t).hidden=!on});
+})});
+</script>
+</body>
+</html>
