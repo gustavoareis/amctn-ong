@@ -74,10 +74,17 @@ nav .btn { padding: .5rem 1.2rem; font-size: .9rem; }
 }
 
 /* hero */
-.hero { background: linear-gradient(135deg, var(--bairro) 0%, var(--noite) 100%); color: #fff; padding: 6rem 0; }
-.hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.02em; max-width: 16ch; margin-bottom: 0.5rem; }
-.subtitle { font-size: .95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sol); margin-bottom: 1.5rem; display: block; }
-.hero p { color: #e2ebff; font-size: 1.1rem; max-width: 38rem; opacity: 0.9; }
+.hero { 
+  background-color: var(--noite);
+  background-image: linear-gradient(135deg, rgba(18, 39, 90, 0.9) 0%, rgba(30, 79, 160, 0.6) 100%), url("Colorful Community Mural Under Blue Skies.png"); 
+  background-size: cover;
+  background-position: center;
+  color: #fff; 
+  padding: 8rem 0 7rem; 
+}
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.02em; max-width: 16ch; margin-bottom: 0.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.subtitle { font-size: .95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sol); margin-bottom: 1.5rem; display: block; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+.hero p { color: #e2ebff; font-size: 1.1rem; max-width: 38rem; opacity: 0.95; text-shadow: 0 1px 5px rgba(0,0,0,0.3); }
 .acts { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
 
 /* sobre */
